@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="page-heading">
+    <a class="read-link" href="{{ '/' | relative_url }}" data-zh="← 所有文章">← All posts</a>
+    <h1>{{ page.title | escape }}</h1>
+    <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: '%Y-%m-%d' }}</time>
+  </header>
+  <div class="prose" lang="{{ page.lang | default: 'zh-CN' | escape }}">{{ content }}</div>
+  <nav class="post-navigation" aria-label="More articles" data-zh-label="更多文章">
+    {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><span data-zh="较早文章">Older post</span><br>{{ page.previous.title | escape }}</a>{% endif %}
+    {% if page.next %}<a href="{{ page.next.url | relative_url }}"><span data-zh="较新文章">Newer post</span><br>{{ page.next.title | escape }}</a>{% endif %}
+  </nav>
+  <a class="read-link" href="{{ '/' | relative_url }}" data-zh="← 返回博客">← Back to blog</a>
+</article>

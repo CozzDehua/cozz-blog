@@ -1,0 +1,29 @@
+title: "Cozz. Blog"
+description: "Research notes and personal writing by Chengzong Xie."
+url: "https://cozzdehua.github.io"
+baseurl: "/cozz-blog"
+repository: "CozzDehua/cozz-blog"
+homepage: "https://cozzdehua.github.io/"
+timezone: Asia/Shanghai
+markdown: kramdown
+highlighter: rouge
+permalink: /posts/:year/:month/:day/:title/
+future: false
+strict_front_matter: true
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      render_with_liquid: false
+exclude:
+  - README.md
+  - templates
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - scripts
